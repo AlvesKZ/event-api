@@ -26,7 +26,7 @@ public class Event {
     private String description;
     private String imgUrl;
     private String eventUrl;
-    private boolean remotr;
+    private Boolean remote;
     private Date date;
 
 }
