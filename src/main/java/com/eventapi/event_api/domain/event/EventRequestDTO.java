@@ -7,7 +7,7 @@ import java.util.Date;
 public record EventRequestDTO(
         String title,
         String description,
-        Date date,
+        long date,
         String city,
         String uf,
         Boolean remote,
