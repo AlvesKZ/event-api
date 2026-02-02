@@ -3,6 +3,7 @@ package com.eventapi.event_api.services;
 import com.amazonaws.services.s3.AmazonS3;
 import com.eventapi.event_api.domain.event.Event;
 import com.eventapi.event_api.domain.event.EventRequestDTO;
+import com.eventapi.event_api.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,10 @@ public class EventService {
 
     @Autowired
     private AmazonS3 s3Client;
+
+    @Autowired
+    private EventRepository repository;
+
     public Event createEvent(EventRequestDTO data) {
         String imageUrl = null;
 
@@ -36,6 +41,9 @@ public class EventService {
         newEvent.setEventUrl(data.eventUrl());
         newEvent.setDate(new Date(data.date()));
         newEvent.setImgUrl(imageUrl);
+        newEvent.setRemote(data.remote());
+
+        repository.save(newEvent);
 
         return newEvent;
     }
@@ -50,7 +58,7 @@ public class EventService {
             return s3Client.getUrl(bucketName, fileName).toString();
         } catch (Exception e) {
             System.out.println("Failed to upload the file.");
-            return null;
+            return "";
         }
     }
 
