@@ -1,0 +1,4 @@
+DB_URL=jdbc:postgresql://eventapi-database.c2zeqygeqbav.us-east-1.rds.amazonaws.com:5432/postgres
+DB_USERNAME=postgres
+DB_PASSWORD=LmBrqky<rVe_V$.uWu>efJ*9YI*z
+S3_NAME=eventapi-images
