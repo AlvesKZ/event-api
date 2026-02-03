@@ -2,11 +2,14 @@ package com.eventapi.event_api.controllers;
 
 import com.eventapi.event_api.domain.event.Event;
 import com.eventapi.event_api.domain.event.EventRequestDTO;
+import com.eventapi.event_api.domain.event.EventResponseDTO;
 import com.eventapi.event_api.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 
 @RestController
@@ -28,5 +31,9 @@ public class EventController {
         EventRequestDTO eventRequestDTO = new EventRequestDTO(title, description, date, city, state, remote, eventUrl, image);
         Event newEvent = this.eventService.createEvent(eventRequestDTO);
         return ResponseEntity.ok(newEvent);
+    }
+
+    public ResponseEntity<List<EventResponseDTO>> getEvents() {
+
     }
 }
