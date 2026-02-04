@@ -21,8 +21,6 @@ Event API is a robust backend application built with Spring Boot for managing ev
 
 ## Technologies
 
-## Technologies
-
 ### Backend
 - **Java 21** - Programming language
 - **Spring Boot 4.0.2** - Main framework
