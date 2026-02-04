@@ -6,7 +6,6 @@ Complete REST API for event management with image upload, coupon system, and add
 
 Event API is a robust backend application built with Spring Boot for managing events, allowing creation, listing, filtering, and discount coupon management. The application includes AWS S3 integration for image storage and full pagination support.
 
-## Features
 
 ## Features
 
@@ -18,6 +17,7 @@ Event API is a robust backend application built with Spring Boot for managing ev
 - ✅ Address management for in-person events
 - ✅ Image upload to AWS S3
 - ✅ Complete event details with valid coupons
+
 
 ## Technologies
 
@@ -38,7 +38,6 @@ Event API is a robust backend application built with Spring Boot for managing ev
 - **H2 Database** - In-memory database for tests
 - **Spring DotEnv** - Environment variable management
 
-## Project Structure
 
 ## Project Structure
 
@@ -83,7 +82,6 @@ src/
         └── EventApiApplicationTests.java
 ```
 
-## Data Model
 
 ## Data Model
 
@@ -130,7 +128,6 @@ src/
 
 ## Installation and Setup
 
-### Prerequisites
 
 ### Prerequisites
 
@@ -499,7 +496,6 @@ Spring DevTools is configured to automatically reload the application during dev
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
-## Best Practices
 
 ## Best Practices
 
